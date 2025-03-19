@@ -1,1 +1,1 @@
-export const isLoading = (...statuses: string[]) => statuses.some((status) => status === 'loading')
+export const isLoading = (...statuses: string[]) => statuses.some((status) => status === "loading")

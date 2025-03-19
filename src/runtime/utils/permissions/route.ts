@@ -1,3 +1,4 @@
+import { createError, navigateTo } from "#imports"
 import { aHasPermission, Permission, type APermission } from "./base"
 
 type RouteCase = {

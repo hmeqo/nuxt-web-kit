@@ -1,3 +1,5 @@
+import { useRouter } from "#imports"
+
 export function navigateBack() {
   const router = useRouter()
   router.back()

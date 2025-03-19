@@ -1,3 +1,5 @@
+import { reactive } from "#imports"
+
 export const responsive = reactive({
   small: false,
   medium: false,

@@ -6,7 +6,18 @@
  * useQueryInt(['page', 'p'], { default: () => 1 }) // query 'page' has higher priority
  */
 
-import { useRoute, type LocationQueryRaw, type RouteLocationNormalizedLoaded } from "vue-router"
+import {
+  computed,
+  createError,
+  ensureEndSlash,
+  ensureStartSlash,
+  navigateTo,
+  ref,
+  showError,
+  useRoute,
+  type Ref
+} from "#imports"
+import type { LocationQueryRaw, RouteLocationNormalizedLoaded } from "vue-router"
 
 type Opts<T> = {
   /**
