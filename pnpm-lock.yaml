@@ -23,9 +23,6 @@ importers:
       nuxt-csurf:
         specifier: ^1.6.5
         version: 1.6.5(magicast@0.3.5)
-      string-format:
-        specifier: ^2.0.0
-        version: 2.0.0
     devDependencies:
       '@eslint/compat':
         specifier: ^1.1.1
@@ -45,9 +42,6 @@ importers:
       '@types/node':
         specifier: ^20.14.14
         version: 20.14.14
-      '@types/string-format':
-        specifier: ^2.0.3
-        version: 2.0.3
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1576,9 +1570,6 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
-
-  '@types/string-format@2.0.3':
-    resolution: {integrity: sha512-2BuDXYaQvSZR5XHlLJQ3KQ455NW+C1Mok0uOO6q8bnp97V/gtZbDEYy44kmu5Ng1U8wRtCSF/leREYVmH2vYmQ==}
 
   '@typescript-eslint/eslint-plugin@7.18.0':
     resolution: {integrity: sha512-94EQTWZ40mzBc42ATNIBimBEDltSJ9RQHCC8vc/PDbxi4k8dVwUAv4o98dk50M1zB+JGFxp43FP7f8+FP8R6Sw==}
@@ -3838,9 +3829,6 @@ packages:
   streamx@2.22.0:
     resolution: {integrity: sha512-sLh1evHOzBy/iWRiR6d1zRcLao4gGZr3C1kzNz4fopCOKJb6xD9ub8Mpi9Mr1R6id5o43S+d93fI48UC5uM9aw==}
 
-  string-format@2.0.0:
-    resolution: {integrity: sha512-bbEs3scLeYNXLecRRuk6uJxdXUSj6le/8rNPHChIJTn2V79aXVTR1EH2OH5zLKKoz0V02fOUKZZcw01pLUShZA==}
-
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -5810,8 +5798,6 @@ snapshots:
   '@types/parse-path@7.0.3': {}
 
   '@types/resolve@1.20.2': {}
-
-  '@types/string-format@2.0.3': {}
 
   '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
@@ -8373,8 +8359,6 @@ snapshots:
       text-decoder: 1.2.3
     optionalDependencies:
       bare-events: 2.5.4
-
-  string-format@2.0.0: {}
 
   string-width@4.2.3:
     dependencies:

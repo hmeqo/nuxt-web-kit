@@ -44,14 +44,12 @@
     "lint:fix": "eslint . --fix",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier src --check",
-    "format": "prettier src --write",
-    "postinstall": "npm run build"
+    "format": "prettier src --write"
   },
   "dependencies": {
     "@hmeqo/easymodel": "0.1.0-beta.3",
     "@nuxt/kit": "^3.16.0",
-    "lodash": "^4.17.21",
-    "string-format": "^2.0.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
@@ -60,7 +58,6 @@
     "@swc/core": "^1.7.6",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20.14.14",
-    "@types/string-format": "^2.0.3",
     "cross-env": "^7.0.3",
     "eslint": "^9.8.0",
     "nuxt": "^3.16.0",
