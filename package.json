@@ -1,6 +1,6 @@
 {
   "name": "@hmeqo/nuxt-web-kit",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "publishConfig": {
     "access": "public",
     "tag": "next"
@@ -67,9 +67,5 @@
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.18.0"
-  },
-  "peerDependencies": {
-    "alova": "^3.2.10",
-    "nuxt-csurf": "^1.6.5"
   }
 }
