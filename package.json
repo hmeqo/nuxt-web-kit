@@ -1,0 +1,76 @@
+{
+  "name": "@hmeqo/nuxt-web-kit",
+  "version": "0.1.0-beta.1",
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
+  "description": "",
+  "type": "module",
+  "author": "hmeqo",
+  "license": "MIT",
+  "keywords": [
+    "data",
+    "model"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmeqo/nuxt-web-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hmeqo/nuxt-web-kit/issues"
+  },
+  "homepage": "https://github.com/hmeqo/nuxt-web-kit#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "nuxi dev playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsup src/index.ts src/errors/index.ts src/utils/index.ts --dts --format esm,cjs",
+    "test": "",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:fix": "eslint . --fix",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier src --check",
+    "format": "prettier src --write"
+  },
+  "dependencies": {
+    "@hmeqo/easymodel": "0.1.0-beta.3",
+    "@nuxt/kit": "^3.16.0",
+    "lodash": "^4.17.21",
+    "string-format": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^9.8.0",
+    "@nuxt/module-builder": "^0.8.4",
+    "@swc/core": "^1.7.6",
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^20.14.14",
+    "@types/string-format": "^2.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.8.0",
+    "nuxt": "^3.16.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.18.0"
+  },
+  "peerDependencies": {
+    "alova": "^3.2.10",
+    "nuxt-csurf": "^1.6.5"
+  }
+}
