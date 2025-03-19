@@ -44,9 +44,9 @@
     "lint:fix": "eslint . --fix",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier src --check",
-    "format": "prettier src --write"
+    "format": "prettier src --write",
+    "postinstall": "npm run build"
   },
-  "prepublish": "release",
   "dependencies": {
     "@hmeqo/easymodel": "0.1.0-beta.3",
     "@nuxt/kit": "^3.16.0",
