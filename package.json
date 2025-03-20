@@ -1,6 +1,6 @@
 {
   "name": "@hmeqo/nuxt-web-kit",
-  "version": "0.1.0-beta.5",
+  "version": "0.1.0-beta.6",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -47,7 +47,6 @@
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@hmeqo/easymodel": "0.1.0-beta.5",
     "@nuxt/kit": "^3.16.0",
     "lodash": "^4.17.21"
   },
