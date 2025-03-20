@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hmeqo/easymodel':
-        specifier: 0.1.0-beta.3
-        version: 0.1.0-beta.3(date-fns@4.1.0)
+        specifier: 0.1.0-beta.5
+        version: 0.1.0-beta.5(date-fns@4.1.0)
       '@nuxt/kit':
         specifier: ^3.16.0
         version: 3.16.0(magicast@0.3.5)
@@ -841,8 +841,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hmeqo/easymodel@0.1.0-beta.3':
-    resolution: {integrity: sha512-DAbyyWuoSHfZ+dpTXjIoxzZ2VK2kPj6ZgEfs0HAsIsQgxhQAU6iN2DAeA/eCHOmGiuAJgHL6Jszsf/1bz4P8iA==}
+  '@hmeqo/easymodel@0.1.0-beta.5':
+    resolution: {integrity: sha512-UKHrrb8RbhF3wzKentFsi1mP/aK3QqfLYrn4LmQq0ypiKQCb82UYdzddMISp+nC/BZZH8aSSqgvjkYsXNG5IsA==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -4995,7 +4995,7 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@hmeqo/easymodel@0.1.0-beta.3(date-fns@4.1.0)':
+  '@hmeqo/easymodel@0.1.0-beta.5(date-fns@4.1.0)':
     dependencies:
       date-fns-tz: 3.2.0(date-fns@4.1.0)
       decimal.js: 10.5.0
