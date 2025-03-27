@@ -1,4 +1,4 @@
-import { ensureStartSlash, noEndSlash, noStartSlash } from "./utils"
+import { ensureEndSlash, ensureStartSlash, noEndSlash, noStartSlash } from "./utils"
 
 export type PathRecord = Record<string, string | Record<string, any>>
 
@@ -24,9 +24,10 @@ export function createUrls<T extends PathRecord>(prefix: string, urls: T): Reado
   }) as Readonly<{ ["index"]: string } & T>
 }
 
-export function urlsEnsureEndslash<T extends PathRecord>(urls: T): T {
+export function urlsEnsureEndSlash<T extends PathRecord>(urls: T): T {
   return Object.entries(urls).reduce(
-    (acc, [key, value]) => Object.assign(acc, { [key]: ensureStartSlash(value) }),
+    (acc, [key, value]) =>
+      Object.assign(acc, { [key]: typeof value === "string" ? ensureEndSlash(value) : urlsEnsureEndSlash(value) }),
     {}
   ) as T
 }
