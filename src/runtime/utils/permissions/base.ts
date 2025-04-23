@@ -1,52 +1,20 @@
-export function getPermission(...permissions: (typeof Permission | Permission)[]): Permission | undefined {
+export function getPermission(...permissions: Permission[]): Permission | undefined {
   for (const p of permissions) {
-    const permission = p instanceof Permission ? p : new p()
-    if (permission.hasPermission()) return permission
+    if (p.hasPermission()) return p
   }
 }
 
-export function hasPermission(...permissions: (typeof Permission | Permission)[]): boolean {
+export function hasPermission(...permissions: Permission[]): boolean {
   return !!getPermission(...permissions)
 }
 
-export async function aGetPermission(
-  ...permissions: (typeof APermission | typeof Permission | APermission | Permission)[]
-): Promise<APermission | Permission | undefined> {
-  for (const p of permissions) {
-    const permission = p instanceof APermission || p instanceof Permission ? p : new p()
-    if (await permission.hasPermission()) return permission
-  }
+export type Permission = {
+  hasPermission(): boolean
 }
 
-export async function aHasPermission(
-  ...permissions: (typeof APermission | typeof Permission | APermission | Permission)[]
-): Promise<boolean> {
-  return !!(await aGetPermission(...permissions))
-}
-
-export class Permission {
-  hasPermission(): boolean {
-    return true
-  }
-}
-
-export class APermission {
-  async hasPermission() {
-    return true
-  }
-}
-
-export function createPermission(hasPermission: () => boolean): typeof Permission {
-  return class extends Permission {
-    override hasPermission(): boolean {
-      return hasPermission()
-    }
-  }
-}
-
-export function createAPermission(hasPermission: () => Promise<boolean>): typeof APermission {
-  return class extends APermission {
-    override async hasPermission() {
+export function createPermission(hasPermission: Permission["hasPermission"]): Permission {
+  return {
+    hasPermission() {
       return hasPermission()
     }
   }
