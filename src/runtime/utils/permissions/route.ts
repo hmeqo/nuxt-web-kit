@@ -8,7 +8,7 @@ type RouteCase = {
    */
   auth: (typeof APermission | APermission | typeof Permission | Permission)[]
   /**
-   * redirect url when authentication successed
+   * redirect url when authentication succeeds
    * @default undefined
    */
   redirect?: string
@@ -18,10 +18,10 @@ type RouteCase = {
    */
   fallback?: string
   /**
-   * stop auth propagation when authentication successed
+   * whether to continue verifying other permissions when authentication succeeds
    * @default false
    */
-  stopOnAuth?: boolean
+  continueVerify?: boolean
   /**
    * throw error if all authentication fails
    * @default false
@@ -30,10 +30,10 @@ type RouteCase = {
 }
 
 export async function routeAuth(...cases: RouteCase[]) {
-  for (const { auth: permissions, redirect, fallback, stopOnAuth, showError } of cases) {
+  for (const { auth: permissions, redirect, fallback, continueVerify, showError } of cases) {
     if (await aHasPermission(...permissions)) {
       if (redirect) return navigateTo(redirect)
-      if (stopOnAuth) return
+      if (continueVerify !== true) return
     } else {
       if (fallback) return navigateTo(fallback)
       if (showError) throw createError({ statusCode: 403 })
