@@ -1,6 +1,6 @@
 export function getPermission(...permissions: Permission[]): Permission | undefined {
   for (const p of permissions) {
-    if (p.hasPermission()) return p
+    if (p.verify()) return p
   }
 }
 
@@ -9,13 +9,13 @@ export function hasPermission(...permissions: Permission[]): boolean {
 }
 
 export type Permission = {
-  hasPermission(): boolean
+  verify(): boolean
 }
 
-export function createPermission(hasPermission: Permission["hasPermission"]): Permission {
+export function createPermission(verify: Permission["verify"]): Permission {
   return {
-    hasPermission() {
-      return hasPermission()
+    verify() {
+      return verify()
     }
   }
 }
