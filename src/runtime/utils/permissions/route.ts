@@ -53,7 +53,7 @@ function redirectTo(to: string) {
 }
 
 function routeTo(to: RouteTo) {
-  const runtimeConfig = useRuntimeConfig().public.runtimeConfig as ModuleOptions
+  const runtimeConfig = useRuntimeConfig().public as ModuleOptions
   if (typeof to === "object") {
     const { path, redirect } = to
     if (redirect) return redirectTo(path)
