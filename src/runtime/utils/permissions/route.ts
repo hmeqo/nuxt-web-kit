@@ -1,11 +1,19 @@
-import { createError, navigateTo } from "#imports"
+import { createError, navigateTo, useRuntimeConfig } from "#imports"
+import type { ModuleOptions } from "../../types"
 import { hasPermission, type Permission } from "./base"
 
 type RouteTo =
   | string
   | {
+      /**
+       * url to navigate
+       */
       path: string
-      redirect: boolean
+      /**
+       * redirect to url instead of navigation
+       * @default false
+       */
+      redirect?: boolean
     }
 
 type RouteCase = {
@@ -45,12 +53,15 @@ function redirectTo(to: string) {
 }
 
 function routeTo(to: RouteTo) {
+  const runtimeConfig = useRuntimeConfig().public.runtimeConfig as ModuleOptions
   if (typeof to === "object") {
     const { path, redirect } = to
     if (redirect) return redirectTo(path)
+    if (runtimeConfig.routeAuth?.defaultRedirect) return redirectTo(path)
     return navigateTo(path)
   }
-  return redirectTo(to)
+  if (runtimeConfig.routeAuth?.defaultRedirect) return redirectTo(to)
+  return navigateTo(to)
 }
 
 export async function routeAuth(cases: RouteCase[], routeAuthOptions?: RouteAuthOptions) {

@@ -1,6 +1,6 @@
 {
   "name": "@hmeqo/nuxt-web-kit",
-  "version": "0.1.0-beta.12",
+  "version": "0.1.0-beta.13",
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -48,24 +48,25 @@
     "format": "prettier src --write"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.16.0",
+    "@nuxt/kit": "^3.17.2",
+    "defu": "^6.1.4",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.1.1",
-    "@eslint/js": "^9.8.0",
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.26.0",
     "@nuxt/module-builder": "^0.8.4",
-    "@swc/core": "^1.7.6",
+    "@swc/core": "^1.11.24",
     "@types/lodash": "^4.17.16",
-    "@types/node": "^20.14.14",
+    "@types/node": "^20.17.45",
     "cross-env": "^7.0.3",
-    "eslint": "^9.8.0",
-    "nuxt": "^3.16.0",
-    "prettier": "^3.3.3",
+    "eslint": "^9.26.0",
+    "nuxt": "^3.17.2",
+    "prettier": "^3.5.3",
     "rimraf": "^5.0.10",
     "ts-node": "^10.9.2",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^7.18.0"
   }
 }
