@@ -22,7 +22,6 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    // @ts-expect-error untyped
     nuxt.options.runtimeConfig.public = defu(nuxt.options.runtimeConfig.public, {
       hmeqoNuxtWebKit: options
     })

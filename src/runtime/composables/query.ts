@@ -128,8 +128,10 @@ function _useQuery<T>(keyOrKeys: string | string[], serializer: Serializer<T>, o
       navigateTo({
         path: route.path,
         query: { ...route.query, ...route.meta.__useQuery },
-        replace: true
+        replace: true,
+        force: true
       })
+      console.log({ ...route.query, ...route.meta.__useQuery }, "??????")
     },
     errorMessage: () => `Cannot parse ${keyOrKeys}: ${route.query[key]}`,
     opts

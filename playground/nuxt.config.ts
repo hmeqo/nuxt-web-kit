@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: "2025-03-12",
 
-  modules: ["../src", "nuxt-csurf"],
+  modules: ["../src"],
 
   typescript: {
     tsConfig: "../global.tsconfig.json"
