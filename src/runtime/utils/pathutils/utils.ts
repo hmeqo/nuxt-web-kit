@@ -23,16 +23,8 @@ export function noStartSlash(_uri: unknown) {
 }
 
 /**
- * Returns the last part of the uri
+ * Returns the last part of the path
  */
-export function uriPrevNode(uri: string) {
+export function pathPrevNode(uri: string) {
   return uri.split("/").slice(0, -1).pop() ?? ""
-}
-
-/**
- * Like python's string.format
- * Example: format('hello {name}', { name: 'John' })
- */
-export function format(url: string, args: Record<string, any>) {
-  return Object.entries(args).reduce((acc: string, [key, arg]) => acc.replace(`{${key}}`, arg), url)
 }
